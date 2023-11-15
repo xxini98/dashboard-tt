@@ -1,13 +1,13 @@
 import React from 'react';
 import { MoonIcon } from '@chakra-ui/icons';
-import { SimpleGrid, Flex, Card, CardHeader, CardBody, Heading, Text } from '@chakra-ui/react';
+import { SimpleGrid, Flex, Card, CardHeader, CardBody, Heading, Box } from '@chakra-ui/react';
 import Layout from '../components/layout/Layout';
 import MiniStatistics from '../components/home/MiniStatistics';
 import IconBox from '../components/icon/IconBox';
 import LineChart from '../components/charts/LineChart';
 import { lineChartDataOverallRevenue, lineChartOptionsOverallRevenue } from '../components/charts/CartData';
-import ReactApexChart from 'react-apexcharts';
 import ApexChart from '../components/charts/ColumnChart';
+import MiniCalendar from '../components/calendar/MiniCalendar';
 
 const boxBg = 'secondary.500';
 
@@ -63,6 +63,13 @@ const Home = () => {
                         <ApexChart />
                     </CardBody>
                 </Card>
+            </SimpleGrid>
+            <SimpleGrid columns={[1, null, null, 2]} spacing={'20px'} mt={'20px'}>
+                <Box w="100%" h="300px" bg="white"></Box>
+                <SimpleGrid columns={[1, 2]} spacing={'20px'}>
+                    <Box w="100%" h="300px" bg="white"></Box>
+                    <MiniCalendar />
+                </SimpleGrid>
             </SimpleGrid>
         </Layout>
     );
