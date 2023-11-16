@@ -3,7 +3,7 @@ import Layout from '../components/layout/Layout';
 import { Box, Flex, Grid, SimpleGrid } from '@chakra-ui/react';
 import Banner from '../components/marketplace/Banner';
 import Header from '../components/layout/header/Header';
-import Nft from '../components/marketplace/Nft';
+import NFTCollection from '../components/marketplace/NFTCollection';
 
 const MarketPlace = () => {
     return (
@@ -17,10 +17,8 @@ const MarketPlace = () => {
                     <Banner />
                     <Box>
                         <Header>Trending NFTs</Header>
-                        <SimpleGrid columns={[1, 3]} spacing={'20px'} mt={'20px'}>
-                            <Nft />
-                            <Box w="100%" h="300px" bg="red"></Box>
-                            <Box w="100%" h="300px" bg="red"></Box>
+                        <SimpleGrid columns={[1, 2, null, null, 3]} spacing={'20px'} mt={'20px'}>
+                            <NFTCollection />
                         </SimpleGrid>
                     </Box>
                 </Flex>
