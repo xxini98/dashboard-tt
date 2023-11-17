@@ -20,8 +20,11 @@ function NFT(props) {
                         top="14px"
                         right="14px"
                         borderRadius="50%"
-                        minW="36px"
+                        w="36px"
+                        minW="0"
                         h="36px"
+                        p="0"
+                        boxSizing="border-box"
                         onClick={() => setLike(!like)}
                     >
                         <Icon w="20px" h="20px" as={like ? IoHeart : IoHeartOutline} color="brand.500" />
@@ -30,7 +33,7 @@ function NFT(props) {
                 <Flex flexDirection="column" justify="space-between">
                     <Flex justify="space-between" mb="auto">
                         <Flex direction="column">
-                            <Text fontSize="xl" mb="5px" fontWeight="bold">
+                            <Text fontSize="xl" mb="5px" fontWeight="bold" h="60px" overflow={'hidden'}>
                                 {name}
                             </Text>
                             <Text color="gray.600" fontSize="sm">
@@ -43,7 +46,7 @@ function NFT(props) {
                             ))}
                         </AvatarGroup>
                     </Flex>
-                    <Flex align="start" justify="space-between" mt="25px">
+                    <Flex align="center" justify="space-between" mt="25px">
                         <Text fontWeight="700" fontSize="sm">
                             Current Bid: {currentbid}
                         </Text>

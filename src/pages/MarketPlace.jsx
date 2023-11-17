@@ -17,7 +17,7 @@ const MarketPlace = () => {
                     <Banner />
                     <Box>
                         <Header>Trending NFTs</Header>
-                        <SimpleGrid columns={[1, 2, null, null, 3]} spacing={'20px'} mt={'20px'}>
+                        <SimpleGrid columns={[1, 2]} spacing={'20px'} mt={'20px'}>
                             <NFTCollection />
                         </SimpleGrid>
                     </Box>
